@@ -1,0 +1,7 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/sb-admin-2.css')
+  body
+    block content
