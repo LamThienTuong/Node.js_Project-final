@@ -1,0 +1,924 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "nordic-shop-api"
+	},
+	"basePath": "/api",
+	"paths": {
+		"/users": {
+			"post": {
+				"tags": [
+					"user"
+				],
+				"summary": "Create a new instance of the model and persist it into the data source.",
+				"operationId": "user.create",
+				"parameters": [
+					{
+						"name": "data",
+						"in": "body",
+						"description": "Model instance data",
+						"required": false,
+						"schema": {
+							"description": "Model instance data",
+							"$ref": "#/definitions/user"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/user"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"get": {
+				"tags": [
+					"user"
+				],
+				"summary": "Find all instances of the model matched by filter from the data source.",
+				"operationId": "user.find",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/user"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/users/{id}": {
+			"get": {
+				"tags": [
+					"user"
+				],
+				"summary": "Find a model instance by {{id}} from the data source.",
+				"operationId": "user.findById",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/user"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"put": {
+				"tags": [
+					"user"
+				],
+				"summary": "Replace attributes for a model instance and persist it into the data source.",
+				"operationId": "user.replaceById__put_users_{id}",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					},
+					{
+						"name": "data",
+						"in": "body",
+						"description": "Model instance data",
+						"required": false,
+						"schema": {
+							"description": "Model instance data",
+							"$ref": "#/definitions/user"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/user"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"delete": {
+				"tags": [
+					"user"
+				],
+				"summary": "Delete a model instance by {{id}} from the data source.",
+				"operationId": "user.deleteById",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"type": "object"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"patch": {
+				"tags": [
+					"user"
+				],
+				"summary": "Patch attributes for a model instance and persist it into the data source.",
+				"operationId": "user.prototype.patchAttributes",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "user id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					},
+					{
+						"name": "data",
+						"in": "body",
+						"description": "An object of model property name/value pairs",
+						"required": false,
+						"schema": {
+							"description": "An object of model property name/value pairs",
+							"$ref": "#/definitions/user"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/user"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/products": {
+			"post": {
+				"tags": [
+					"product"
+				],
+				"summary": "Create a new instance of the model and persist it into the data source.",
+				"operationId": "product.create",
+				"parameters": [
+					{
+						"name": "data",
+						"in": "body",
+						"description": "Model instance data",
+						"required": false,
+						"schema": {
+							"description": "Model instance data",
+							"$ref": "#/definitions/product"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/product"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"get": {
+				"tags": [
+					"product"
+				],
+				"summary": "Find all instances of the model matched by filter from the data source.",
+				"operationId": "product.find",
+				"parameters": [
+					{
+						"name": "filter",
+						"in": "query",
+						"description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})",
+						"required": false,
+						"type": "string",
+						"format": "JSON"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/product"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/products/{id}": {
+			"get": {
+				"tags": [
+					"product"
+				],
+				"summary": "Find a model instance by {{id}} from the data source.",
+				"operationId": "product.findById",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/product"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"put": {
+				"tags": [
+					"product"
+				],
+				"summary": "Replace attributes for a model instance and persist it into the data source.",
+				"operationId": "product.replaceById__put_products_{id}",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					},
+					{
+						"name": "data",
+						"in": "body",
+						"description": "Model instance data",
+						"required": false,
+						"schema": {
+							"description": "Model instance data",
+							"$ref": "#/definitions/product"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/product"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"delete": {
+				"tags": [
+					"product"
+				],
+				"summary": "Delete a model instance by {{id}} from the data source.",
+				"operationId": "product.deleteById",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"type": "object"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"patch": {
+				"tags": [
+					"product"
+				],
+				"summary": "Patch attributes for a model instance and persist it into the data source.",
+				"operationId": "product.prototype.patchAttributes",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "product id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					},
+					{
+						"name": "data",
+						"in": "body",
+						"description": "An object of model property name/value pairs",
+						"required": false,
+						"schema": {
+							"description": "An object of model property name/value pairs",
+							"$ref": "#/definitions/product"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/product"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/categories": {
+			"post": {
+				"tags": [
+					"category"
+				],
+				"summary": "Create a new instance of the model and persist it into the data source.",
+				"operationId": "category.create",
+				"parameters": [
+					{
+						"name": "data",
+						"in": "body",
+						"description": "Model instance data",
+						"required": false,
+						"schema": {
+							"description": "Model instance data",
+							"$ref": "#/definitions/category"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/category"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"get": {
+				"tags": [
+					"category"
+				],
+				"summary": "Find all instances of the model matched by filter from the data source.",
+				"operationId": "category.find",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/category"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/categories/{id}": {
+			"get": {
+				"tags": [
+					"category"
+				],
+				"summary": "Find a model instance by {{id}} from the data source.",
+				"operationId": "category.findById",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/category"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"put": {
+				"tags": [
+					"category"
+				],
+				"summary": "Replace attributes for a model instance and persist it into the data source.",
+				"operationId": "category.replaceById__put_categories_{id}",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					},
+					{
+						"name": "data",
+						"in": "body",
+						"description": "Model instance data",
+						"required": false,
+						"schema": {
+							"description": "Model instance data",
+							"$ref": "#/definitions/category"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/category"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"delete": {
+				"tags": [
+					"category"
+				],
+				"summary": "Delete a model instance by {{id}} from the data source.",
+				"operationId": "category.deleteById",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"type": "object"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"patch": {
+				"tags": [
+					"category"
+				],
+				"summary": "Patch attributes for a model instance and persist it into the data source.",
+				"operationId": "category.prototype.patchAttributes",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "category id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					},
+					{
+						"name": "data",
+						"in": "body",
+						"description": "An object of model property name/value pairs",
+						"required": false,
+						"schema": {
+							"description": "An object of model property name/value pairs",
+							"$ref": "#/definitions/category"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/category"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/orders": {
+			"post": {
+				"tags": [
+					"order"
+				],
+				"summary": "Create a new instance of the model and persist it into the data source.",
+				"operationId": "order.create",
+				"parameters": [
+					{
+						"name": "data",
+						"in": "body",
+						"description": "Model instance data",
+						"required": false,
+						"schema": {
+							"description": "Model instance data",
+							"$ref": "#/definitions/order"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/order"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"get": {
+				"tags": [
+					"order"
+				],
+				"summary": "Find all instances of the model matched by filter from the data source.",
+				"operationId": "order.find",
+				"parameters": [
+					{
+						"name": "filter",
+						"in": "query",
+						"description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})",
+						"required": false,
+						"type": "string",
+						"format": "JSON"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/order"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/orders/{id}": {
+			"get": {
+				"tags": [
+					"order"
+				],
+				"summary": "Find a model instance by {{id}} from the data source.",
+				"operationId": "order.findById",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/order"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"put": {
+				"tags": [
+					"order"
+				],
+				"summary": "Replace attributes for a model instance and persist it into the data source.",
+				"operationId": "order.replaceById__put_orders_{id}",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					},
+					{
+						"name": "data",
+						"in": "body",
+						"description": "Model instance data",
+						"required": false,
+						"schema": {
+							"description": "Model instance data",
+							"$ref": "#/definitions/order"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/order"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"delete": {
+				"tags": [
+					"order"
+				],
+				"summary": "Delete a model instance by {{id}} from the data source.",
+				"operationId": "order.deleteById",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Model id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"type": "object"
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"patch": {
+				"tags": [
+					"order"
+				],
+				"summary": "Patch attributes for a model instance and persist it into the data source.",
+				"operationId": "order.prototype.patchAttributes",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "order id",
+						"required": true,
+						"type": "string",
+						"format": "JSON"
+					},
+					{
+						"name": "data",
+						"in": "body",
+						"description": "An object of model property name/value pairs",
+						"required": false,
+						"schema": {
+							"description": "An object of model property name/value pairs",
+							"$ref": "#/definitions/order"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Request was successful",
+						"schema": {
+							"$ref": "#/definitions/order"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		}
+	},
+	"tags": [
+		{
+			"name": "user"
+		},
+		{
+			"name": "product"
+		},
+		{
+			"name": "category"
+		},
+		{
+			"name": "order"
+		}
+	],
+	"consumes": [
+		"application/json",
+	],
+	"produces": [
+		"application/json",
+	],
+	"definitions": {
+		"x-any": {
+			"properties": {}
+		},
+		"user": {
+			"properties": {
+				"avatar": {
+					"type": "string"
+				},
+				"firstName": {
+					"type": "string"
+				},
+				"lastName": {
+					"type": "string"
+				},
+				"dob": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"gender": {
+					"type": "string"
+				},
+				"country": {
+					"type": "string"
+				},
+				"phoneNumber": {
+					"type": "string"
+				},
+				"zipcode": {
+					"type": "string"
+				},
+				"username": {
+					"type": "string"
+				},
+				"email": {
+					"type": "string"
+				},
+				"emailVerified": {
+					"type": "boolean"
+				},
+				"role": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"firstName",
+				"lastName",
+				"gender",
+				"username",
+				"email"
+			],
+			"additionalProperties": false
+		},
+		"category": {
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"iconName": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				}
+			},
+			"required": [
+			],
+			"additionalProperties": false
+		},
+		"product": {
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"salePrice": {
+					"type": "number",
+					"format": "double"
+				},
+				"originalPrice": {
+					"type": "number",
+					"format": "double"
+				},
+				"image": {
+					"type": "string"
+				},
+				"thumbnail": {
+					"type": "string"
+				},
+				"shortDescription": {
+					"type": "string"
+				},
+				"category": {
+					"type": "string"
+				},
+				"images": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"thumbnails": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"required": [
+				"category",
+				"originalPrice"
+			],
+			"additionalProperties": false
+		},
+		"order": {
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"orderDate": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"shippedDate": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"customer": {
+					"$ref": "#/definitions/ObjectID"
+				},
+				"paymentType": {
+					"type": "string"
+				},
+				"status": {
+					"type": "string"
+				},
+				"paymentStatus": {
+					"type": "string"
+				},
+				"items": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/order_detail"
+					}
+				}
+			},
+			"required": [
+				"name",
+				"customerId"
+			],
+			"additionalProperties": false
+		},
+		"order_detail": {
+			"properties": {
+				"productId": {
+					"$ref": "#/definitions/ObjectID"
+				},
+				"quantity": {
+					"type": "number",
+					"format": "double"
+				},
+				"price": {
+					"type": "number",
+					"format": "double"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ObjectID": {
+			"type": "string",
+			"pattern": "^[a-fA-F\\d]{24}$"
+		}
+	}
+}

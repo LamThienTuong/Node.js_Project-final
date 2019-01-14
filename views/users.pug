@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Users </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+
+                        <li>
+                            <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+
+                        <li>
+                            <a href="/admin/products"><i class="fa fa-table fa-fw"></i> Products </a>
+                        </li>
+                        <li>
+                            <a href="/admin/categories"><i class="fa fa-edit fa-fw"></i> Categories </a>
+                        </li>
+                        <li>
+                            <a href="/admin/users"><i class="fa fa-edit fa-fw"></i> Users  </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header"> Users</h1>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="">
+                    <div class="panel panel-default">
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Name</th>
+                                            <th>Gender</th>
+                                            <th>Country</th>
+                                            <th>Phone Number</th>
+                                            <th>Email</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    for user in userList
+                                        <tr>
+                                            <td>#{user.id}</td>
+                                            <td>#{user.fullName}</td>
+                                            <td>#{user.gender}</td>
+                                            <td>#{user.country}</td>
+                                            <td>#{user.phoneNumber}</td>
+                                            <td>#{user.email}</td>
+                                            <td> <form action="/admin/users/#{user.id}" method="DELETE" enctype="multipart/form-data"><button type="submit" class="btn btn-success">Delete User</button></form>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a href="/admin/users/user"><button type="submit" class="btn btn-success">Create User</button></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

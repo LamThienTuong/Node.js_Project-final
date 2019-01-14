@@ -1,0 +1,90 @@
+{
+  "header": {
+    "status": 200,
+    "errorMessage": "",
+    "currentDate": "2018-12-10T13:52:11.340Z",
+    "totalCount": 0
+  },
+  "body": [
+    {
+      "id": "001",
+      "avatar": "https://api.adorable.io/avatar/nordiccoder",
+      "firstName": "Nordic",
+      "lastName": "Coder",
+      "dob": "1990-12-10T13:06:35.216Z",
+      "gender": "male",
+      "country": "vietnam",
+      "phoneNumber": "12345678",
+      "zipcode": "700000",
+      "username": "admin",
+      "email": "admin@nordiccoder.com",
+      "emailVerified": true,
+      "role": "admin"
+    },
+    {
+      "id": "002",
+      "avatar": "https://api.adorable.io/avatar/ltt",
+      "firstName": "Tường",
+      "lastName": "Lâm Thiên",
+      "dob": "1990-12-10T13:06:35.216Z",
+      "gender": "male",
+      "country": "vietnam",
+      "phoneNumber": "12345678",
+      "zipcode": "700000",
+      "username": "thientuong",
+      "email": "tuong.lam@nordiccoder.com",
+      "emailVerified": true,
+      "role": "admin"
+    },
+    {
+      "id": "003",
+      "avatar": "https://api.adorable.io/avatar/tvda",
+      "firstName": "Anh",
+      "lastName": "Từ Vũ Đức",
+      "dob": "1990-12-10T13:06:35.216Z",
+      "gender": "male",
+      "country": "vietnam",
+      "phoneNumber": "12345678",
+      "zipcode": "700000",
+      "username": "ducanh",
+      "email": "anh.tu@nordiccoder.com",
+      "emailVerified": true,
+      "role": "admin"
+    },
+    {
+      "id": "004",
+      "avatar": "https://api.adorable.io/avatar/nnt",
+      "firstName": "Tiến",
+      "lastName": "Nguyễn Như",
+      "dob": "1990-12-10T13:06:35.216Z",
+      "gender": "male",
+      "country": "vietnam",
+      "phoneNumber": "12345678",
+      "zipcode": "700000",
+      "username": "nhutien",
+      "email": "tien.nguyen@nordiccoder.com",
+      "emailVerified": true,
+      "role": "admin"
+    },
+    {
+      "id": "005",
+      "avatar": "https://api.adorable.io/avatar/caq",
+      "firstName": "Quốc",
+      "lastName": "Cao Anh",
+      "dob": "1990-12-10T13:06:35.216Z",
+      "gender": "male",
+      "country": "vietnam",
+      "phoneNumber": "12345678",
+      "zipcode": "700000",
+      "username": "anhquoc",
+      "email": "quoc.cao@nordiccoder.com",
+      "emailVerified": true,
+      "role": "admin"
+    }
+  ],
+  "pagination": {
+    "limit": 10,
+    "skip": 0,
+    "total": 5
+  }
+}

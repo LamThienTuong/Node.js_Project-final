@@ -6,17 +6,17 @@ const userSchema = new Schema(
 		avatar: Object,
 		firstName: {
 			type: String,
-			required: true,
+			//required: true,
 		},
 		lastName: {
 			type: String,
-			required: true,
+			//required: true,
 		},
 		dob: Date,
 		gender: {
 			type: String,
 			enum: ['male', 'female'],
-			required: true,
+			//required: true,
 		},
 		country: String,
 		phoneNumber: String,
@@ -27,23 +27,23 @@ const userSchema = new Schema(
 		},
 		username: {
 			type: String,
-			required: true,
+			//required: true,
 			validate: {
 				validator: function(v) {
 					return /^[A-Za-z0-9_.-]+$/.test(v);
 				},
-				message: props => `${props.value} is not a valid username!`,
+				//message: props => `${props.value} is not a valid username!`,
 			},
 		},
 		email: {
 			type: String,
-			required: true,
+			//required: true,
 			validate: [
 				{
 					validator: function(v) {
 						return /([\w.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/.test(v);
 					},
-					message: props => `${props.value} is not a valid email!`,
+					//message: props => `${props.value} is not a valid email!`,
 				},
 				{
 					validator: function(v) {
@@ -64,7 +64,7 @@ const userSchema = new Schema(
 		role: {
 			type: String,
 			enum: ['admin', 'moderator', 'user'],
-			required: true,
+			required: false,
 		},
 		dateCreated: {
 			type: Date,

@@ -1,0 +1,30 @@
+{
+  "header": {
+    "status": 200,
+    "errorMessage": "",
+    "currentDate": "2018-12-10T13:06:45.679Z",
+    "totalCount": 0
+  },
+  "body": [
+    {
+      "id": "5b822e7f9c300309b7e9befc",
+      "name": "men",
+      "iconName": "men"
+    },
+    {
+      "id": "5b822e919c300309b7e9bf0e",
+      "name": "women",
+      "iconName": "women"
+    },
+    {
+      "id": "5b822ea99c300309b7e9bf13",
+      "name": "accessories",
+      "iconName": "accessories"
+    }
+  ],
+  "pagination": {
+    "limit": 10,
+    "skip": 0,
+    "total": 3
+  }
+}

@@ -2,7 +2,7 @@
 const orderDetailsSchema = new Schema({
   productId: Schema.Types.ObjectId,
   quantity: 0,
-  price: 0,
+  price: 0
 });
 
 const orderSchema = new Schema({
@@ -11,19 +11,19 @@ const orderSchema = new Schema({
   shippedDate: Date,
   customer: {
     type: Schema.Types.ObjectId,
-    ref: 'User',
+    ref: "Users"
   },
   paymentType: {
     type: String,
-    enum: ['cod', 'paypal', 'creditcard', 'banktransfer'],
+    enum: ["cod", "paypal", "creditcard", "banktransfer"]
   },
   status: {
     type: String,
-    enum: ['pending', 'processing', 'shipping', 'delivered'],
+    enum: ["pending", "processing", "shipping", "delivered"]
   },
   paymentStatus: {
     type: String,
-    enum: ['paid', 'unpaid'],
+    enum: ["paid", "unpaid"]
   },
-  items: [orderDetailsSchema],
+  items: [orderDetailsSchema]
 });
